@@ -129,3 +129,4 @@
 /Users/iqra/Desktop/School/Semester 2/Locally-solution/Locally/bin/Debug/net10.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
 /Users/iqra/Desktop/School/Semester 2/Locally-solution/Locally/obj/Debug/net10.0/Locally.csproj.AssemblyReference.cache
 /Users/iqra/Desktop/School/Semester 2/Locally-solution/Locally/obj/Debug/net10.0/Locally.csproj.Up2Date
+/Users/iqra/Desktop/School/Semester 2/Locally-solution/Locally/obj/Debug/net10.0/Locally.sourcelink.json

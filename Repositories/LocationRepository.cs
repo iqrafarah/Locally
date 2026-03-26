@@ -89,8 +89,13 @@ public class LocationRepository : ILocationRepository
             {
                 Id = (int)reader["Id"],
                 Name = reader["Name"].ToString()!,
+                Website = reader["Website"] == DBNull.Value ? null : reader["Website"].ToString(),
                 City = reader["City"].ToString()!,
-                Category = reader["Category"].ToString()!
+                Category = reader["Category"].ToString()!,
+                Description = reader["Description"] == DBNull.Value ? null : reader["Description"].ToString(),
+                PriceFrom = reader["PriceFrom"] == DBNull.Value ? null : (decimal?)reader["PriceFrom"],
+                PriceTo = reader["PriceTo"] == DBNull.Value ? null : (decimal?)reader["PriceTo"],
+                Status = Enum.Parse<LocationStatus>(reader["Status"].ToString()!)
             };
         }
 

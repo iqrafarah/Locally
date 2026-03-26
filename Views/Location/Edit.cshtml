@@ -1,6 +1,29 @@
-namespace Locally.Views.Location;
+@model Locally.Models.Location
 
-public class Edit_cshtml
-{
-    
-}
+<h2>Edit Location</h2>
+
+<form asp-action="Edit" method="post">
+    <input asp-for="Id" type="hidden" />
+
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <label>City</label>
+        <input asp-for="City" />
+    </div>
+
+    <div>
+        <label>Category</label>
+        <input asp-for="Category" />
+    </div>
+
+    <div>
+        <label>Description</label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+
+    <button type="submit">Save</button>
+</form>
