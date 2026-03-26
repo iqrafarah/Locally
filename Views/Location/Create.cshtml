@@ -1,0 +1,67 @@
+@model Locally.Models.Location
+
+<h2 class="mb-4">Add a hidden gem</h2>
+<p>Share your favorite local spot</p>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Location name *</label>
+        <input asp-for="Name" class="form-control" placeholder="Location name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Website" class="form-label">Website (optional)</label>
+        <input asp-for="Website" class="form-control" placeholder="https://example.com" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="City" class="form-label">City *</label>
+        <input asp-for="City" class="form-control" placeholder="City" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Category" class="form-label">Choose a category *</label>
+        <select asp-for="Category" class="form-select">
+            <option value="">Choose a category</option>
+            <option value="Food & Drink">Food & Drink</option>
+            <option value="Nature">Nature</option>
+            <option value="Culture">Culture</option>
+            <option value="Shops">Shops</option>
+            <option value="Photo spots">Photo spots</option>
+            <option value="Nightlife">Nightlife</option>
+            <option value="Activities">Activities</option>
+            <option value="Cafés">Cafés</option>
+        </select>
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="PriceFrom" class="form-label">Price from</label>
+            <input asp-for="PriceFrom" class="form-control" placeholder="0" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label asp-for="PriceTo" class="form-label">Price to</label>
+            <input asp-for="PriceTo" class="form-control" placeholder="175" />
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Why is this place special?</label>
+        <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Upload photos</label>
+        <input type="file" name="images" class="form-control" multiple />
+    </div>
+
+    <button type="submit" class="btn btn-success">Create hidden gem</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
